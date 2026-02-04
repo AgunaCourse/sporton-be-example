@@ -14,6 +14,7 @@ export const createProduct = async (
 
     if (productData.categoryId) {
       productData.category = productData.categoryId;
+      delete productData.categoryId;
     }
 
     const product = new Product(productData);
